@@ -1,15 +1,10 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
-// EmailJS Configuration - You need to set up your own EmailJS account
-// 1. Go to https://www.emailjs.com/ and create a free account
-// 2. Create an Email Service (connect your Gmail/email)
-// 3. Create an Email Template with variables: {{from_name}}, {{from_email}}, {{message}}
-// 4. Replace these IDs with your own:
-const EMAILJS_SERVICE_ID = "service_portfolio";
-const EMAILJS_TEMPLATE_ID = "template_contact";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+// Web3Forms - Free contact form API (250 submissions/month)
+// Get your access key at: https://web3forms.com/ (instant, no signup needed - just enter your email)
+// Replace this with your actual access key:
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
 export default function ContactModal({ isOpen, onClose }) {
   const formRef = useRef();
@@ -29,20 +24,32 @@ export default function ContactModal({ isOpen, onClose }) {
     setStatus("sending");
 
     try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        EMAILJS_PUBLIC_KEY
-      );
-      setStatus("success");
-      setFormData({ from_name: "", from_email: "", message: "" });
-      setTimeout(() => {
-        setStatus("idle");
-        onClose();
-      }, 2500);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: formData.from_name,
+          email: formData.from_email,
+          message: formData.message,
+          subject: `Portfolio Contact: ${formData.from_name}`,
+          from_name: "Portfolio Website",
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setStatus("success");
+        setFormData({ from_name: "", from_email: "", message: "" });
+        setTimeout(() => {
+          setStatus("idle");
+          onClose();
+        }, 2500);
+      } else {
+        throw new Error(result.message);
+      }
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Form Error:", error);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
     }
