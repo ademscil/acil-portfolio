@@ -24,16 +24,16 @@ export const skills = {
   technical: [
     { name: "Node.js", level: 90 },
     { name: "JavaScript (ES6+)", level: 88 },
+    { name: "TypeScript", level: 80 },
     { name: "Laravel (PHP)", level: 80 },
     { name: "React / Next.js", level: 78 },
     { name: "SQL Server", level: 85 },
     { name: "REST API / JWT", level: 90 },
     { name: "Puppeteer", level: 85 },
     { name: "Appium", level: 70 },
+    { name: "Astro", level: 72 },
     { name: "Git", level: 85 },
     { name: "Linux / Windows / macOS", level: 80 },
-    { name: "Dynatrace", level: 72 },
-    { name: "SAP API Integration", level: 75 },
   ],
   soft: [
     "Problem Solving",
@@ -95,32 +95,68 @@ export const education = [
 
 export const projects = [
   {
-    name: "Enterprise Web Platform",
+    name: "Event Management System",
     description:
-      "Internal tools and enterprise web applications integrated with SQL Server and SAP APIs. Features JWT authentication, role-based access control, and JSON-based data processing.",
-    stack: ["Node.js", "Laravel", "Next.js", "SQL Server", "SAP API"],
-    highlights: ["JWT Auth", "RBAC", "REST API"],
+      "Full-stack event management platform with separate backend (Node.js REST API) and frontend (TypeScript/React). Features event CRUD, participant management, and real-time updates.",
+    stack: ["Node.js", "TypeScript", "React", "REST API"],
+    highlights: ["Full-stack", "REST API", "Real-time"],
+    github: "https://github.com/ademscil/Event-Management-BE",
   },
   {
-    name: "Business Event Management System",
+    name: "Doorprize App",
     description:
-      "Interactive business modules including event management and doorprize systems with fair randomization logic for corporate events.",
-    stack: ["Node.js", "React", "SQL Server"],
-    highlights: ["Real-time", "Fair Algorithm", "Interactive UI"],
+      "Interactive doorprize/lucky draw application with fair randomization logic for corporate events. Built with JavaScript for seamless real-time participant selection.",
+    stack: ["JavaScript", "Node.js", "Randomization Logic"],
+    highlights: ["Interactive", "Fair Algorithm", "Real-time"],
+    github: "https://github.com/ademscil/doorprize-app",
   },
   {
-    name: "Web & Mobile Automation Suite",
+    name: "Nurul Jannah Mosque Website",
     description:
-      "Automation solutions using Puppeteer for web automation and Appium for Android automation testing, reducing manual operational workload significantly.",
-    stack: ["Puppeteer", "Appium", "Node.js"],
-    highlights: ["CI/CD Ready", "Cross-platform", "Scalable"],
+      "Community mosque website built with TypeScript for managing information, schedules, and community activities for Masjid Nurul Jannah.",
+    stack: ["TypeScript", "Web App"],
+    highlights: ["Community", "TypeScript", "Responsive"],
+    github: "https://github.com/ademscil/nuruljannah-mosque",
   },
   {
-    name: "IoT Weather Data Collection System",
+    name: "Photobooth App",
     description:
-      "Data collection system for rainfall, humidity, and temperature measurements as a basis for revalidating Weather Research and Forecasting (WRF) simulation.",
-    stack: ["IoT", "Sensors", "Data Processing", "Python"],
-    highlights: ["Real-time Data", "Sensor Integration", "Research"],
+      "Digital photobooth application built with TypeScript, enabling users to capture, filter, and share photos during events.",
+    stack: ["TypeScript", "Camera API", "Canvas"],
+    highlights: ["Interactive", "Media API", "Event Tool"],
+    github: "https://github.com/ademscil/photobooth",
+  },
+  {
+    name: "Kejaksaan Babar Agenda",
+    description:
+      "Agenda management system for Kejaksaan (prosecutor's office) built with Astro framework for fast, static-first performance.",
+    stack: ["Astro", "TypeScript", "Static Site"],
+    highlights: ["Government", "Fast", "Astro"],
+    github: "https://github.com/ademscil/kejaksaan-babar-agenda",
+  },
+  {
+    name: "PII PKP Organization Website",
+    description:
+      "Professional organization website for PII (Persatuan Insinyur Indonesia) Pangkalpinang chapter, built with TypeScript.",
+    stack: ["TypeScript", "Web App"],
+    highlights: ["Organization", "Professional", "Responsive"],
+    github: "https://github.com/ademscil/pii-pkp",
+  },
+  {
+    name: "Arycons Company Profile",
+    description:
+      "Corporate company profile website built with Laravel (Blade templating) for Arycons, showcasing services and portfolio.",
+    stack: ["Laravel", "Blade", "PHP"],
+    highlights: ["Corporate", "Laravel", "CMS"],
+    github: "https://github.com/ademscil/arycons-profile",
+  },
+  {
+    name: "Eko Car Rental PKP",
+    description:
+      "Car rental platform for a local business in Pangkalpinang, featuring vehicle listings and booking information.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    highlights: ["Local Business", "Booking", "Responsive"],
+    github: "https://github.com/ademscil/eko-car-rentpkp",
   },
 ];
 
