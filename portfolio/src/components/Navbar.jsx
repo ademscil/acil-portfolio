@@ -33,10 +33,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.a
           href="#top"
-          className="text-xl font-bold bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent"
+          className="text-xl font-bold text-text-primary hover:text-primary-light transition-colors"
           whileHover={{ scale: 1.05 }}
         >
-          AJ
+          Adam Juliansyah
         </motion.a>
 
         {/* Desktop Links */}
