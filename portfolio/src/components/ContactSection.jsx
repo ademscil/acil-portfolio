@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/profile";
 import MiniScene from "./MiniScene";
+import ContactModal from "./ContactModal";
 
 const contactLinks = [
   {
@@ -46,7 +48,11 @@ const contactLinks = [
 ];
 
 export default function ContactSection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
+    <>
+    <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     <section id="contact" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.08),transparent_60%)]" />
       <div className="absolute bottom-0 right-0 w-80 h-80 opacity-25 hidden lg:block">
@@ -120,14 +126,14 @@ export default function ContactSection() {
           transition={{ delay: 0.6 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <motion.a
-            href={`mailto:${personalInfo.email}`}
-            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
+          <motion.button
+            onClick={() => setModalOpen(true)}
+            className="px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all cursor-pointer"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
-            Send an Email
-          </motion.a>
+            Send a Message
+          </motion.button>
           <motion.a
             href={personalInfo.cvFile}
             target="_blank"
@@ -141,5 +147,6 @@ export default function ContactSection() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
