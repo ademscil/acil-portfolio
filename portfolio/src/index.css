@@ -1,35 +1,54 @@
-:root {
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
+@import "tailwindcss";
 
-  --primary: #3a86ff;
-  --primary-light: #7bb3ff;
-  --accent: #8c9cff;
-  --surface: #0f152d;
-  --surface-alt: #121b38;
-  --border-strong: rgba(121, 150, 255, 0.38);
-  --text-primary: rgba(231, 236, 255, 0.96);
-  --text-secondary: rgba(200, 208, 240, 0.78);
-  --text-muted: rgba(144, 158, 198, 0.68);
-  --text-on-primary: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-accent: #22d3ee;
+  --color-accent-warm: #f472b6;
+  --color-surface: #030712;
+  --color-surface-alt: #0a0f1e;
+  --color-surface-card: #111827;
+  --color-border: rgba(99, 102, 241, 0.2);
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background-color: var(--surface);
+  font-family: "Inter", "SF Pro Display", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
 }
 
 a {
