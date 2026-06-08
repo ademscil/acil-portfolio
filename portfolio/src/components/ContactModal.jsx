@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 // Web3Forms - Free contact form API (250 submissions/month)
 // Get your access key at: https://web3forms.com/ (instant, no signup needed - just enter your email)
 // Replace this with your actual access key:
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "750730ac-5594-467a-bd84-a3a1db9a9ace";
 
 export default function ContactModal({ isOpen, onClose }) {
   const formRef = useRef();
