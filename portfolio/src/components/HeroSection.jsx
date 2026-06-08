@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "../data/profile";
 import Scene3D from "./Scene3D";
+import TypingEffect from "./TypingEffect";
 
 function ProfilePhoto() {
   const [imgError, setImgError] = useState(false);
@@ -76,14 +77,24 @@ export default function HeroSection() {
             </span>
           </motion.h1>
 
-          <motion.p
+          <motion.div
             className="text-xl md:text-2xl text-text-secondary font-light mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            {personalInfo.role}
-          </motion.p>
+            <TypingEffect
+              texts={[
+                "Backend / Fullstack Developer",
+                "Automation Engineer",
+                "Enterprise Web Builder",
+                "REST API Specialist",
+              ]}
+              speed={70}
+              deleteSpeed={35}
+              pauseTime={2500}
+            />
+          </motion.div>
 
           <motion.p
             className="text-base md:text-lg text-text-muted max-w-2xl mb-10"

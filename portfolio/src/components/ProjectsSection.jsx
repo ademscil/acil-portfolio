@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { projects } from "../data/profile";
+import MiniScene from "./MiniScene";
 
 export default function ProjectsSection() {
   return (
     <section id="projects" className="relative py-32 px-6 bg-surface-alt/50">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(244,114,182,0.04),transparent_50%)]" />
+      <div className="absolute top-20 left-0 w-72 h-72 opacity-20">
+        <MiniScene type="sphere" height="100%" />
+      </div>
 
       <div className="max-w-6xl mx-auto relative">
         <motion.div
