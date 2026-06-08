@@ -1,7 +1,6 @@
 import { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, Stars, MeshDistortMaterial } from "@react-three/drei";
-import * as THREE from "three";
 
 function AnimatedSphere({ position, color, speed = 1, distort = 0.3, size = 1 }) {
   const meshRef = useRef();
