@@ -6,10 +6,10 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_right,rgba(99,102,241,0.04),transparent_50%)]" />
-      <div className="absolute top-10 right-0 w-72 h-72 opacity-25">
+      <div className="absolute top-10 right-0 w-72 h-72 opacity-25 hidden lg:block">
         <MiniScene type="torus" height="100%" />
       </div>
-      <div className="absolute bottom-10 left-0 w-64 h-64 opacity-20">
+      <div className="absolute bottom-10 left-0 w-64 h-64 opacity-20 hidden lg:block">
         <MiniScene type="cube" height="100%" />
       </div>
 

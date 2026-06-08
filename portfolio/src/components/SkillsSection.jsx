@@ -34,8 +34,8 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="relative py-32 px-6 bg-surface-alt/50">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.04),transparent_50%)]" />
-      {/* 3D Background Element */}
-      <div className="absolute bottom-0 left-0 w-80 h-80 opacity-30">
+      {/* 3D Background Element - hidden on mobile */}
+      <div className="absolute bottom-0 left-0 w-80 h-80 opacity-30 hidden lg:block">
         <MiniScene type="helix" height="100%" />
       </div>
 

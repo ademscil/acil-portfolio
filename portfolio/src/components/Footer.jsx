@@ -50,7 +50,7 @@ export default function Footer() {
         href="https://wa.me/6281806701775?text=Halo%20Adam,%20saya%20tertarik%20untuk%20berdiskusi%20lebih%20lanjut."
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white z-50 shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all"
+        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white z-50 shadow-lg shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40 transition-all"
         whileHover={{ scale: 1.1, y: -3 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -65,7 +65,7 @@ export default function Footer() {
       {/* Back to top */}
       <motion.a
         href="#top"
-        className="fixed bottom-8 right-24 w-12 h-12 rounded-full bg-surface-card border border-border/50 flex items-center justify-center text-text-muted hover:text-primary-light hover:border-primary/40 transition-all z-40 shadow-lg"
+        className="fixed bottom-6 right-22 w-10 h-10 md:w-12 md:h-12 rounded-full bg-surface-card border border-border/50 flex items-center justify-center text-text-muted hover:text-primary-light hover:border-primary/40 transition-all z-40 shadow-lg"
         whileHover={{ y: -3, scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >

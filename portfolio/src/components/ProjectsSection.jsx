@@ -6,7 +6,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="relative py-32 px-6 bg-surface-alt/50">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(244,114,182,0.04),transparent_50%)]" />
-      <div className="absolute top-20 left-0 w-72 h-72 opacity-20">
+      <div className="absolute top-20 left-0 w-72 h-72 opacity-20 hidden lg:block">
         <MiniScene type="sphere" height="100%" />
       </div>
 
@@ -45,13 +45,13 @@ export default function ProjectsSection() {
 
               <div className="relative p-8 rounded-3xl bg-surface-card border border-border/50 group-hover:border-primary/30 transition-all h-full flex flex-col">
                 {/* Header */}
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-col gap-4 mb-6">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                     <svg className="w-6 h-6 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                     </svg>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-wrap gap-2">
                     {project.highlights.map((h) => (
                       <span
                         key={h}

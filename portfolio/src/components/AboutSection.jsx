@@ -20,8 +20,8 @@ export default function AboutSection() {
     <section id="about" className="relative py-32 px-6">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.05),transparent_50%)]" />
-      {/* 3D Background Element */}
-      <div className="absolute top-0 right-0 w-96 h-96 opacity-40">
+      {/* 3D Background Element - hidden on mobile */}
+      <div className="absolute top-0 right-0 w-96 h-96 opacity-40 hidden lg:block">
         <MiniScene type="dna" height="100%" />
       </div>
 

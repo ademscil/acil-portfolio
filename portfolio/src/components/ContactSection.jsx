@@ -49,10 +49,10 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.08),transparent_60%)]" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 opacity-25">
+      <div className="absolute bottom-0 right-0 w-80 h-80 opacity-25 hidden lg:block">
         <MiniScene type="sphere" height="100%" />
       </div>
-      <div className="absolute top-10 left-10 w-60 h-60 opacity-20">
+      <div className="absolute top-10 left-10 w-60 h-60 opacity-20 hidden lg:block">
         <MiniScene type="cube" height="100%" />
       </div>
 
