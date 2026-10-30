@@ -9,6 +9,7 @@ export default function TypingEffect({ texts, speed = 80, deleteSpeed = 40, paus
 
   useEffect(() => {
     const currentText = texts[textIndex];
+    let pauseTimeout;
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
@@ -16,7 +17,7 @@ export default function TypingEffect({ texts, speed = 80, deleteSpeed = 40, paus
           setDisplayText(currentText.slice(0, charIndex + 1));
           setCharIndex(charIndex + 1);
         } else {
-          setTimeout(() => setIsDeleting(true), pauseTime);
+          pauseTimeout = setTimeout(() => setIsDeleting(true), pauseTime);
         }
       } else {
         if (charIndex > 0) {
@@ -29,7 +30,10 @@ export default function TypingEffect({ texts, speed = 80, deleteSpeed = 40, paus
       }
     }, isDeleting ? deleteSpeed : speed);
 
-    return () => clearTimeout(timeout);
+    return () => {
+      clearTimeout(timeout);
+      if (pauseTimeout) clearTimeout(pauseTimeout);
+    };
   }, [charIndex, isDeleting, textIndex, texts, speed, deleteSpeed, pauseTime]);
 
   return (

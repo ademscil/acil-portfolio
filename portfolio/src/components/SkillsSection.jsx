@@ -17,7 +17,14 @@ function SkillBar({ name, level, index }) {
         </span>
         <span className="text-xs text-text-muted">{level}%</span>
       </div>
-      <div className="h-2 rounded-full bg-surface-card overflow-hidden">
+      <div
+        className="h-2 rounded-full bg-surface-card overflow-hidden"
+        role="progressbar"
+        aria-valuenow={level}
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label={`${name} proficiency`}
+      >
         <motion.div
           className="h-full rounded-full bg-gradient-to-r from-primary via-primary-light to-accent"
           initial={{ width: 0 }}
@@ -127,20 +134,30 @@ export default function SkillsSection() {
                 Tools & Platforms
               </h4>
               <div className="flex flex-wrap gap-3">
-                {["Git", "Dynatrace", "Ivanti", "Docker", "VS Code", "Postman", "Linux", "Windows Server"].map(
-                  (tool, i) => (
-                    <motion.span
-                      key={tool}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.6 + i * 0.05 }}
-                      className="px-3 py-1.5 text-xs font-medium rounded-full bg-surface-card border border-border/50 text-text-secondary hover:border-primary/30 hover:text-primary-light transition-all cursor-default"
-                    >
-                      {tool}
-                    </motion.span>
-                  )
-                )}
+                {[
+                  "Git",
+                  "Appium",
+                  "Puppeteer",
+                  "Dynatrace",
+                  "BeyondTrust PAM",
+                  "Ivanti",
+                  "Docker",
+                  "VS Code",
+                  "Postman",
+                  "Linux",
+                  "Windows Server",
+                ].map((tool, i) => (
+                  <motion.span
+                    key={tool}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.6 + i * 0.05 }}
+                    className="px-3 py-1.5 text-xs font-medium rounded-full bg-surface-card border border-border/50 text-text-secondary hover:border-primary/30 hover:text-primary-light transition-all cursor-default"
+                  >
+                    {tool}
+                  </motion.span>
+                ))}
               </div>
             </motion.div>
           </div>

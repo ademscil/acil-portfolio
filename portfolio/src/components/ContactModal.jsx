@@ -2,9 +2,9 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Web3Forms - Free contact form API (250 submissions/month)
-// Get your access key at: https://web3forms.com/ (instant, no signup needed - just enter your email)
-// Replace this with your actual access key:
-const WEB3FORMS_ACCESS_KEY = "750730ac-5594-467a-bd84-a3a1db9a9ace";
+// Get your access key at: https://web3forms.com/
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "750730ac-5594-467a-bd84-a3a1db9a9ace";
 
 export default function ContactModal({ isOpen, onClose }) {
   const formRef = useRef();
@@ -36,6 +36,10 @@ export default function ContactModal({ isOpen, onClose }) {
           from_name: "Portfolio Website",
         }),
       });
+
+      if (!response.ok) {
+        throw new Error(`Server returned status: ${response.status}`);
+      }
 
       const result = await response.json();
       if (result.success) {
@@ -90,7 +94,8 @@ export default function ContactModal({ isOpen, onClose }) {
               {/* Close button */}
               <button
                 onClick={onClose}
-                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface/50 border border-border/50 flex items-center justify-center text-text-muted hover:text-text-primary hover:border-primary/40 transition-all"
+                aria-label="Tutup form kontak"
+                className="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface/50 border border-border/50 flex items-center justify-center text-text-muted hover:text-text-primary hover:border-primary/40 transition-all cursor-pointer"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -108,10 +113,14 @@ export default function ContactModal({ isOpen, onClose }) {
               {/* Form */}
               <form ref={formRef} onSubmit={handleSubmit} className="relative space-y-5">
                 <div>
-                  <label className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2">
+                  <label
+                    htmlFor="contact-from-name"
+                    className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2"
+                  >
                     Your Name
                   </label>
                   <input
+                    id="contact-from-name"
                     type="text"
                     name="from_name"
                     value={formData.from_name}
@@ -123,10 +132,14 @@ export default function ContactModal({ isOpen, onClose }) {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2">
+                  <label
+                    htmlFor="contact-from-email"
+                    className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2"
+                  >
                     Your Email
                   </label>
                   <input
+                    id="contact-from-email"
                     type="email"
                     name="from_email"
                     value={formData.from_email}
@@ -138,10 +151,14 @@ export default function ContactModal({ isOpen, onClose }) {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2">
+                  <label
+                    htmlFor="contact-message"
+                    className="block text-xs font-medium text-text-muted uppercase tracking-wider mb-2"
+                  >
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -155,7 +172,7 @@ export default function ContactModal({ isOpen, onClose }) {
                 <motion.button
                   type="submit"
                   disabled={status === "sending"}
-                  className="w-full py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+                  className="w-full py-3.5 rounded-full bg-gradient-to-r from-primary to-primary-light text-white font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all disabled:opacity-60 disabled:cursor-not-allowed text-sm cursor-pointer"
                   whileHover={status !== "sending" ? { scale: 1.02 } : {}}
                   whileTap={status !== "sending" ? { scale: 0.98 } : {}}
                 >

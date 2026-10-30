@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Adam Juliansyah",
-  role: "Backend / Fullstack Developer",
+  role: "Senior Fullstack & Backend Systems Engineer",
   location: "Pangkalpinang, Indonesia",
   summary:
-    "Backend / Fullstack-focused developer with hands-on experience building internal tools, enterprise web applications, and automation systems. Experienced in REST API integration, JWT authentication, SAP API integration, and system troubleshooting.",
+    "Senior Fullstack & Backend Systems Engineer with 5+ years of experience architecting high-availability enterprise web platforms, secure microservices, and automation systems at PT Astra Otoparts Tbk. Specialist in Next.js 16, React 19, Node.js Express 5 / Fastify, TypeScript, SQL Server, and enterprise test automation.",
   website: "https://adamjuliansyah.netlify.app",
   email: "adamjuliansyahcv@gmail.com",
   phone: "+62 818-0670-1775",
@@ -13,34 +13,34 @@ export const personalInfo = {
 };
 
 export const highlights = [
-  "Building enterprise web apps with Node.js, Laravel, React & Next.js",
-  "REST API integration, JWT auth, and SAP API integration",
-  "Web automation (Puppeteer) & mobile testing (Appium)",
-  "System monitoring with Dynatrace & log analysis",
-  "Cross-functional collaboration in remote environments",
+  "Architecting enterprise monorepos (Next.js 16, React 19, Express 5, SQL Server) with 218 API endpoints & 2,780+ tests",
+  "Dual corporate LDAP & JWT auth with httpOnly session token rotation & deny-by-default RBAC",
+  "B2B digital commerce ecosystem integration (Desktop, Mobile, Admin, SAP ERP sync & Payment Gateway)",
+  "Full-stack test automation frameworks: Appium (Mobile/Java) & Puppeteer (Web Automation)",
+  "Defense-in-depth security: AES-256-GCM envelope encryption, HMAC blind indexing, and BeyondTrust PAM",
 ];
 
 export const skills = {
   technical: [
-    { name: "Node.js", level: 90 },
-    { name: "JavaScript (ES6+)", level: 88 },
-    { name: "TypeScript", level: 80 },
-    { name: "Laravel (PHP)", level: 80 },
-    { name: "React / Next.js", level: 78 },
-    { name: "SQL Server", level: 85 },
-    { name: "REST API / JWT", level: 90 },
-    { name: "Puppeteer", level: 85 },
-    { name: "Appium", level: 70 },
-    { name: "Astro", level: 72 },
-    { name: "Git", level: 85 },
-    { name: "Linux / Windows / macOS", level: 80 },
+    { name: "Node.js / Express 5 / Fastify", level: 92 },
+    { name: "TypeScript / JavaScript (ES6+)", level: 90 },
+    { name: "Next.js 16 / React 19", level: 88 },
+    { name: "SQL Server (T-SQL, Migrations)", level: 88 },
+    { name: "REST API Design / JWT Token Rotation", level: 94 },
+    { name: "Appium / Mobile QA Automation", level: 82 },
+    { name: "Puppeteer / Web Automation", level: 88 },
+    { name: "Android / Kotlin", level: 75 },
+    { name: "PostgreSQL / Prisma ORM", level: 82 },
+    { name: "ASP.NET Core / C#", level: 78 },
+    { name: "IIS (ARR Reverse Proxy) & Windows Server", level: 85 },
+    { name: "Git & Monorepo Architecture", level: 90 },
   ],
   soft: [
-    "Problem Solving",
-    "Cross-functional Communication",
-    "Independent Remote Work",
-    "Technical Documentation",
-    "System Troubleshooting",
+    "Enterprise Systems Architecture",
+    "Cross-functional Team Leadership",
+    "Root Cause Analysis & Incident Resolution",
+    "Technical Documentation & Architecture Guidelines",
+    "Independent Remote & Hybrid Execution",
   ],
 };
 
@@ -48,36 +48,35 @@ export const experience = [
   {
     title: "Software & Automation Developer",
     company: "PT Astra Otoparts Tbk",
-    period: "2024 — Present",
+    period: "2021 — Present",
     bullets: [
-      "Develop internal tools and enterprise web applications using Node.js, Laravel, and Next.js integrated with SQL Server and SAP APIs.",
-      "Implement JWT authentication and role-based access control for secure system access.",
-      "Build interactive business modules, including event management and doorprize systems with fair randomization logic.",
-      "Develop web automation (Puppeteer) and mobile automation testing solutions (Appium) to reduce manual operational workload.",
-      "Integrate internal/external services via REST APIs and handle JSON-based data processing.",
-      "Troubleshoot and resolve application issues using logs and monitoring tools.",
+      "Architected CSI Eventurer (Enterprise Survey & Event Platform) monorepo: Next.js 16, React 19, TypeScript, Express 5, and SQL Server with 218 REST endpoints and 99 idempotent migrations.",
+      "Engineered a rigorous automated testing suite consisting of 2,780+ automated unit and integration tests across 237 test suites with 0 regression escapes.",
+      "Implemented dual corporate LDAP Active Directory and salted bcrypt authentication with httpOnly rotating JWT cookies and deny-by-default RBAC across 5 enterprise roles.",
+      "Engineered dynamic Form Builder, multi-tier approval workflow, real-time Doorprize system (Roulette/Slot animations with audio sync), and privacy-first zero-PII QR attendance tokens.",
+      "Developed Aspira SATSET Admin Portal (mechanic loyalty ecosystem) utilizing Next.js 16, ASP.NET Core REST APIs, RSA client payload encryption, and video content scoring workflows.",
+      "Maintained 5 Astraotoshop B2B portals (Desktop, Mobile, Admin, SAP ERP sync API, Payment Gateway); authored the 'Zero-Mistake' Staging Migration Architecture preventing production data contamination.",
+      "Built automated mobile testing framework with Appium, Java, Maven, and TestNG, alongside Puppeteer headless automation scripts reducing manual operational QA workload by >70%.",
     ],
   },
   {
-    title: "IT Support (2nd-Level)",
+    title: "IT Support (2nd-Level) & Systems Administrator",
     company: "PT Astra Otoparts Tbk",
-    period: "2023 — 2024",
+    period: "2020 — 2021",
     bullets: [
-      "Provided 2nd-level IT support for internal users across multiple departments.",
-      "Resolved hardware and software incidents, including OS, network connectivity, and application-related issues.",
-      "Analyzed system and application logs (Windows and Linux) to identify root causes and prevent recurring incidents.",
-      "Tracked incidents and service requests in Ivanti according to SLA and documented resolutions.",
+      "Provided 2nd-level technical support for internal business units; resolved hardware, OS (Windows/Linux), network connectivity, and ERP application incidents adhering to strict Ivanti ITSM SLAs.",
+      "Enforced BeyondTrust PAM superuser approval workflows, performed remote asset audits, and authored operational Standard Operating Procedures (WI).",
+      "Monitored server clusters and production service health utilizing Dynatrace APM and OS log analysis to preempt system downtime.",
     ],
   },
   {
     title: "DevOps Intern",
     company: "Pasaryoo App",
-    period: "2020 — 2021",
+    period: "2019 — 2020",
     bullets: [
-      "Monitored backend services and application performance to support a stable SaaS environment.",
-      "Investigated production issues using logs and monitoring tools, escalating findings to engineering teams.",
-      "Assisted frontend and backend teams with environment setup, deployment support, and basic troubleshooting.",
-      "Contributed to documentation of deployment steps and system behavior for operational clarity.",
+      "Monitored SaaS backend services and microservice uptimes to guarantee production stability.",
+      "Investigated production incidents through server log analysis and escalated actionable findings to senior engineering teams.",
+      "Assisted engineering teams with CI/CD staging environments and deployment runbook documentation.",
     ],
   },
 ];
@@ -88,75 +87,101 @@ export const education = [
     institution: "Telkom University",
     period: "2014 — 2020",
     details:
-      "Final Project: Data Collection System for Rainfall, Humidity, and Temperature as a Basis for Revalidating the WRF Simulation Device.",
-    subjects: ["Web Programming", "Software Engineering", "Sensor Integration", "IoT Systems"],
+      "Final Project: Data Collection System for Rainfall, Humidity, and Temperature as a Basis for Revalidating the Weather Research and Forecasting (WRF) Simulation Device.",
+    subjects: ["Software Engineering", "Web Programming", "Distributed Systems", "IoT & Sensor Integration"],
   },
 ];
 
 export const projects = [
   {
-    name: "Event Management System",
+    name: "CSI Eventurer (Enterprise Survey & Event Governance)",
     description:
-      "Full-stack event management platform with separate backend (Node.js REST API) and frontend (TypeScript/React). Features event CRUD, participant management, and real-time updates.",
-    stack: ["Node.js", "TypeScript", "React", "REST API"],
-    highlights: ["Full-stack", "REST API", "Real-time"],
-    github: "https://github.com/ademscil/Event-Management-BE",
+      "Mission-critical enterprise platform for PT Astra Otoparts Tbk. Monorepo architecture with 218 REST endpoints, 99 SQL Server migrations, 2,780+ automated tests, LDAP auth, rotating JWT cookies, dynamic form builder, multi-tier approval workflow, and automated analytics reports.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Node.js", "Express 5", "SQL Server", "IIS ARR", "LDAP"],
+    highlights: ["Enterprise Monorepo", "218 REST Endpoints", "2,780+ Tests", "Multi-Tier Approval"],
+    github: null,
+    isEnterprise: true,
   },
   {
-    name: "Doorprize App",
+    name: "Aspira SATSET Admin Portal",
     description:
-      "Interactive doorprize/lucky draw application with fair randomization logic for corporate events. Built with JavaScript for seamless real-time participant selection.",
-    stack: ["JavaScript", "Node.js", "Randomization Logic"],
-    highlights: ["Interactive", "Fair Algorithm", "Real-time"],
+      "Centralized administrative portal for Astra OtoReward mechanic community. Features client-side RSA encrypted login, ASP.NET Core REST API reverse proxying, SQL Server connection pool fallback, mechanic content scoring, and reward merchandise logistics tracking.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "ASP.NET Core", "SQL Server", "Tailwind CSS v4"],
+    highlights: ["Enterprise Admin", "RSA Encryption", "Content Scoring", "Rewards Logistics"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "Astraotoshop B2B Commercial Ecosystem & POC Migration",
+    description:
+      "Engineered and maintained 5 interconnected wholesale portals: Desktop, Mobile Web, Admin Panel, SAP ERP Sync API, and Payment Gateway. Authored the Zero-Mistake POC Migration Architecture and automated verification pre-scanners.",
+    stack: ["Node.js", "JavaScript", "SQL Server", "SAP API", "IIS", "Windows Task Scheduler"],
+    highlights: ["B2B E-Commerce", "SAP ERP Sync", "Zero-Mistake Migration", "High Throughput"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "B2B Mobile & Web Test Automation Suites",
+    description:
+      "Comprehensive end-to-end test automation frameworks. Built mobile app testing with Appium, Java, Maven, and TestNG, and automated browser operations using Puppeteer and Node.js.",
+    stack: ["Appium", "Java", "TestNG", "Maven", "Puppeteer", "Node.js"],
+    highlights: ["Mobile Automation", "Regression Testing", "Headless QA", "Quality Gates"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "SIM-RT Enterprise Monorepo v3.0",
+    description:
+      "Clean architecture monorepo for neighborhood community governance. Fastify 5 REST & SSE backend, React 19 admin panel, CapacitorJS Android super-app, PostgreSQL RLS, AES-256-GCM envelope encryption, blind indexing, and anti-tamper ledger hash chaining.",
+    stack: ["Fastify 5", "React 19", "CapacitorJS", "PostgreSQL RLS", "AES-256-GCM", "Turborepo"],
+    highlights: ["Clean Monorepo", "Cryptographic Vault", "PostgreSQL RLS", "Offline-Ready"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "Dishub Trayek GIS Transit App",
+    description:
+      "Native Android GIS public transit route tracking application for Department of Transportation (Dishub). Features GeoJSON spatial mapping, route visualization, transit stop heuristic mapping, and offline-capable search.",
+    stack: ["Android", "Kotlin", "GeoJSON", "GIS Mapping", "Spatial Heuristics"],
+    highlights: ["Android Native", "GIS GeoJSON", "Heuristic Search", "Government"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "SaaS Wedding Multi-Tenant Platform",
+    description:
+      "Production-grade multi-tenant digital invitation SaaS platform. Features dynamic guest management, RSVP workflows, digital gifting, Prisma ORM schema migrations, Playwright E2E tests, and Docker orchestration.",
+    stack: ["Next.js", "Prisma ORM", "PostgreSQL", "Docker", "Playwright", "Vitest"],
+    highlights: ["Multi-Tenant SaaS", "Prisma ORM", "Playwright E2E", "Docker"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "PortalMasjid Governance Platform",
+    description:
+      "Community mosque administration and financial transparency platform. Features real-time donation tracking, financial report generation, prayer scheduling, and committee access management.",
+    stack: ["Next.js", "TypeScript", "Prisma ORM", "Tailwind CSS"],
+    highlights: ["Financial Transparency", "Fullstack", "Prisma", "Community"],
+    github: null,
+    isEnterprise: true,
+  },
+  {
+    name: "Event Doorprize Interactive Draw System",
+    description:
+      "Real-time interactive lucky draw platform for Astra corporate events. Features fair randomization logic, multi-display support, high-framerate visual animations (Roulette, Swiper, Slot), and synchronized audio effects.",
+    stack: ["JavaScript", "Node.js", "Canvas", "Audio API", "Real-Time"],
+    highlights: ["Fair Randomization", "Event Tool", "High Engagement", "Interactive UI"],
     github: "https://github.com/ademscil/doorprize-app",
-  },
-  {
-    name: "Nurul Jannah Mosque Website",
-    description:
-      "Community mosque website built with TypeScript for managing information, schedules, and community activities for Masjid Nurul Jannah.",
-    stack: ["TypeScript", "Web App"],
-    highlights: ["Community", "TypeScript", "Responsive"],
-    github: "https://github.com/ademscil/nuruljannah-mosque",
-  },
-  {
-    name: "Photobooth App",
-    description:
-      "Digital photobooth application built with TypeScript, enabling users to capture, filter, and share photos during events.",
-    stack: ["TypeScript", "Camera API", "Canvas"],
-    highlights: ["Interactive", "Media API", "Event Tool"],
-    github: "https://github.com/ademscil/photobooth",
+    isEnterprise: false,
   },
   {
     name: "Kejaksaan Babar Agenda",
     description:
-      "Agenda management system for Kejaksaan (prosecutor's office) built with Astro framework for fast, static-first performance.",
-    stack: ["Astro", "TypeScript", "Static Site"],
-    highlights: ["Government", "Fast", "Astro"],
+      "Official agenda and schedule management system for Kejaksaan Negeri Bangka Barat, built with Astro framework for static-first high performance and zero JavaScript runtime overhead.",
+    stack: ["Astro", "TypeScript", "Tailwind CSS", "Static Site"],
+    highlights: ["Government", "Ultra Fast", "Astro", "SEO Optimized"],
     github: "https://github.com/ademscil/kejaksaan-babar-agenda",
-  },
-  {
-    name: "PII PKP Organization Website",
-    description:
-      "Professional organization website for PII (Persatuan Insinyur Indonesia) Pangkalpinang chapter, built with TypeScript.",
-    stack: ["TypeScript", "Web App"],
-    highlights: ["Organization", "Professional", "Responsive"],
-    github: "https://github.com/ademscil/pii-pkp",
-  },
-  {
-    name: "Arycons Company Profile",
-    description:
-      "Corporate company profile website built with Laravel (Blade templating) for Arycons, showcasing services and portfolio.",
-    stack: ["Laravel", "Blade", "PHP"],
-    highlights: ["Corporate", "Laravel", "CMS"],
-    github: "https://github.com/ademscil/arycons-profile",
-  },
-  {
-    name: "Eko Car Rental PKP",
-    description:
-      "Car rental platform for a local business in Pangkalpinang, featuring vehicle listings and booking information.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    highlights: ["Local Business", "Booking", "Responsive"],
-    github: "https://github.com/ademscil/eko-car-rentpkp",
+    isEnterprise: false,
   },
 ];
 
@@ -164,5 +189,9 @@ export const certifications = [
   {
     name: "Fullstack Node.js Bootcamp",
     issuer: "Certificate Code ID",
+  },
+  {
+    name: "BeyondTrust Privileged Access Management (PAM) Operational Compliance",
+    issuer: "PT Astra Otoparts Tbk",
   },
 ];

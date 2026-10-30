@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adamjuliansyah.netlify.app/sitemap.xml
