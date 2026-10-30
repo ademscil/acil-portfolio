@@ -71,7 +71,7 @@ export const experience = [
   },
   {
     title: "DevOps Intern",
-    company: "Pasaryoo App",
+    company: "Pasaryoo App (Pangkalpinang)",
     period: "2019 — 2020",
     bullets: [
       "Monitored SaaS backend services and microservice uptimes to guarantee production stability.",
